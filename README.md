@@ -12,3 +12,4 @@ This is some Java examples of data structures and algorithms which are created a
 
 ## Algorithms
 * [Eight Queens Puzzle Sollution](src/com/xu/algorithms/EightQueens.java)
+* [Bubble Sort](src/com/xu/algorithms/BubbleSort.java)
