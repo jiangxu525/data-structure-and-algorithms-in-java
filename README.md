@@ -10,10 +10,11 @@ This is some Java examples of data structures and algorithms which are created a
 
 ## Data Structures
 * [Array Queue](src/com/xu/datastructure/ArrayQueueDemo.java)
+* [Linked List](src/com/xu/datastructure/LinkedListDemo.java)
+
 
 ## Algorithms
 * [Eight Queens Puzzle Sollution](src/com/xu/algorithms/EightQueens.java)
 * [Sparse Array](src/com/xu/algorithms/SparseArray.java)
 * [Bubble Sort](src/com/xu/algorithms/BubbleSort.java)
-* [Insert Sort](src/com/xu/algorithms/BubbleSort.java)
-* [Bubble Sort](src/com/xu/algorithms/BubbleSort.java)
+* [Insert Sort](src/com/xu/algorithms/InsertSort.java)

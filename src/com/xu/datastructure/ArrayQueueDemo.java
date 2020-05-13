@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ArrayQueueDemo {
 
 	public static void main(String[] args) {
-		ArrayQueue arrayQueue = new ArrayQueue(3);
+		ArrayQueue arrayQueue = new ArrayQueue(5);
 		char key = ' ';
 		Scanner scanner = new Scanner(System.in);
 		boolean loop = true;
@@ -31,7 +31,7 @@ public class ArrayQueueDemo {
 				try {
 					System.out.println(arrayQueue.getQueue());
 				} catch (Exception e) {
-					e.printStackTrace();
+					System.out.println(e.getMessage());
 				}
 				break;
 			case 'h':
@@ -49,6 +49,7 @@ public class ArrayQueueDemo {
 				break;
 			}
 		}
+		scanner.close();
 		System.out.println("End!Thanks!");
 	}
 
