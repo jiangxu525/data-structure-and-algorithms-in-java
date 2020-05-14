@@ -11,8 +11,10 @@ public class InsertSort {
 		for(int i = 0; i <20;i++) {
 			arr[i] = (int)(Math.random()*100);
 		}
+		System.out.println(Arrays.toString(arr));
 		insertSort(arr);
 		//print out the result
+		System.out.println("After insert sort:");
 		System.out.println(Arrays.toString(arr));
 		
 	}

@@ -15,6 +15,13 @@ This is some Java examples of data structures and algorithms which are created a
 * [Double Linked List](src/com/xu/datastructure/DoubleLinkedListDemo.java)
 * [Array Stack](src/com/xu/datastructure/ArrayStackDemo.java)
 * [Linked List Stack](src/com/xu/datastructure/LinkedListStackDemo.java)
+* [Hash Table](src/com/xu/datastructure/HashTableDemo.java)
+* [Array Binary Tree](src/com/xu/datastructure/ArrayBinaryTree.java)
+* [Binary Tree in Linked List](src/com/xu/datastructure/BinaryTreeDemo.java)
+* [Huffman Tree](src/com/xu/datastructure/HuffmanTree.java)
+* [Threaded Binary Tree](src/com/xu/datastructure/thread/ThreadedBinaryTreeDemo.java)
+* [Binary Sort Tree](src/com/xu/datastructure/binarysorttree/BinarySortTreeDemo.java)
+
 
 
 
@@ -30,8 +37,11 @@ This is some Java examples of data structures and algorithms which are created a
 * [Quick Sort](src/com/xu/algorithms/QuickSort.java)
 * [Merge Sort](src/com/xu/algorithms/MergeSort.java)
 * [Radix Sort](src/com/xu/algorithms/RadixSort.java)
+* [Heap Sort](src/com/xu/algorithms/HeapSort.java)
 * [Sequence Search](src/com/xu/algorithms/SeqSearch.java)
-
+* [Binary Search](src/com/xu/algorithms/BinarySearch.java)
+* [Insert Value Search](src/com/xu/algorithms/InsertValueSearch.java)
+* [Fibonacci Search](src/com/xu/algorithms/FibonacciSearch.java)
 
 
 

@@ -6,12 +6,11 @@ public class BinarySearch {
 	
 	//array must be ordered
 	public static void main(String[] args) {
-		int[] arr = new int[80];
-		for (int i = 0; i < 80; i++) {
-			arr[i] = (int) (Math.random() * 50);
-		}
+
+		int arr[] = {1,8,10,89,1000,1234};
+
 		System.out.println(Arrays.toString(arr));
-		int value = 1;
+		int value = 89;
 		int resIndex = binarySearch(arr, 0, arr.length, value);
 		System.out.println("The index of " +value +" is " + resIndex);
 	}
