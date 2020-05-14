@@ -18,10 +18,20 @@ This is some Java examples of data structures and algorithms which are created a
 
 
 
-
 ## Algorithms
 * [Eight Queens Puzzle Sollution](src/com/xu/algorithms/EightQueens.java)
 * [Sparse Array](src/com/xu/algorithms/SparseArray.java)
-* [Bubble Sort](src/com/xu/algorithms/BubbleSort.java)
-* [Insert Sort](src/com/xu/algorithms/InsertSort.java)
 * [Josephus Permutation](src/com/xu/algorithms/Josephus.java)
+* [Poland Notation InfixToPostfix](src/com/xu/algorithms/InfixToPostfix.java)
+* [Bubble Sort](src/com/xu/algorithms/BubbleSort.java)
+* [Select Sort](src/com/xu/algorithms/SelectSort.java)
+* [Insert Sort](src/com/xu/algorithms/InsertSort.java)
+* [Shell Sort](src/com/xu/algorithms/ShellSort.java)
+* [Quick Sort](src/com/xu/algorithms/QuickSort.java)
+* [Merge Sort](src/com/xu/algorithms/MergeSort.java)
+* [Radix Sort](src/com/xu/algorithms/RadixSort.java)
+* [Sequence Search](src/com/xu/algorithms/SeqSearch.java)
+
+
+
+
