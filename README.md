@@ -1,6 +1,7 @@
-This is some Java examples of data structures and algorithms which are created and used during my academic learning of software development. All codes are tested and please feel free to use.
+This is some Java examples of data structures and algorithms which are created and used during my academic learning. All codes are tested and please feel free to use.
 
 ## Created by Xu Jiang
+## Email: jiangxu525@gmail.com
 
 ## Contents
 - [Data Structures](#data-structures)
@@ -11,6 +12,11 @@ This is some Java examples of data structures and algorithms which are created a
 ## Data Structures
 * [Array Queue](src/com/xu/datastructure/ArrayQueueDemo.java)
 * [Linked List](src/com/xu/datastructure/LinkedListDemo.java)
+* [Double Linked List](src/com/xu/datastructure/DoubleLinkedListDemo.java)
+* [Array Stack](src/com/xu/datastructure/ArrayStackDemo.java)
+* [Linked List Stack](src/com/xu/datastructure/LinkedListStackDemo.java)
+
+
 
 
 ## Algorithms
@@ -18,3 +24,4 @@ This is some Java examples of data structures and algorithms which are created a
 * [Sparse Array](src/com/xu/algorithms/SparseArray.java)
 * [Bubble Sort](src/com/xu/algorithms/BubbleSort.java)
 * [Insert Sort](src/com/xu/algorithms/InsertSort.java)
+* [Josephus Permutation](src/com/xu/algorithms/Josephus.java)

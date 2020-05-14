@@ -10,38 +10,16 @@ public class LinkedListDemo {
 		Node node3 = new Node(3, "C");
 		Node node4 = new Node(4, "D");
 
-		Node node5 = new Node(3, "F");
-
 		SingleLinkedList list = new SingleLinkedList();
-
 		list.add(node1);
 		list.add(node2);
 		list.add(node3);
 		list.add(node4);
-
-//		list.addByOrder(node1);
-//		list.addByOrder(node4);
-//		list.addByOrder(node2);
-//		list.addByOrder(node3);
-
 		list.show();
-//		System.out.println("**********************");
-//		list.delete(4);
-//		list.show();
-
-//		 System.out.println("*********************");
-//		 list.update(node5);
-//		 list.show();
-
 		System.out.println("**************************");
-
-		// System.out.println(list.find(1));
-		//
-//		System.out.println("**************************");
-//		reverse(list);
-//		list.show();
-
-		//list.reverseShow();
+		list.reverse();
+		list.show();
+		
 	}
 }
 
@@ -50,7 +28,7 @@ class SingleLinkedList {
 	private Node head = new Node(0, "");
 	
 	public  void reverse() {
-		Node temp = head;
+		Node temp = head.getNext();
 		head.setNext(null);
 		if (temp != null && temp.getNext()!= null) {
 			while (temp != null) {
