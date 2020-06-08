@@ -2,6 +2,13 @@ package com.xu.datastructure;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * @ClassName: ArrayStackDemo
+ * @Description: demo for stack
+ * @author Xu
+ * @date 2020-06-07 11:18:10
+ */
 public class ArrayStackDemo {
 
 	public static void main(String[] args) {
@@ -44,6 +51,13 @@ public class ArrayStackDemo {
 	}
 }
 
+/**
+ * 
+ * @ClassName: ArrayStack
+ * @Description: Stack
+ * @author Xu
+ * @date 2020-06-07 11:18:25
+ */
 class ArrayStack {
 	private int maxSize;
 	private int[] stack;

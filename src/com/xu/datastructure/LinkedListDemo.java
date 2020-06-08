@@ -2,6 +2,13 @@ package com.xu.datastructure;
 
 import java.util.Stack;
 
+/**
+ * 
+ * @ClassName: LinkedListDemo
+ * @Description: test the various methods of SingleLinkedList
+ * @author Xu
+ * @date 2020-06-08 09:57:03
+ */
 public class LinkedListDemo {
 	// this main method is used to test the various methods of SingleLinkedList
 	public static void main(String[] args) {
@@ -19,29 +26,54 @@ public class LinkedListDemo {
 		System.out.println("**************************");
 		list.reverse();
 		list.show();
-		
+
 	}
 }
 
+/**
+ * 
+ * @ClassName: SingleLinkedList
+ * @Description: Single Linked List
+ * @author Xu
+ * @date 2020-06-08 09:57:14
+ */
 class SingleLinkedList {
-	// head is the default head for the single linked list
+	/**
+	 * head is the default head for the single linked list
+	 */
 	private Node head = new Node(0, "");
-	
-	public  void reverse() {
+
+	/**
+	 * 
+	 * @Title: reverse
+	 * @Description: reverse the list
+	 * @author Xu
+	 * @date 2020-06-08 09:57:35
+	 */
+	public void reverse() {
 		Node temp = head.getNext();
 		head.setNext(null);
-		if (temp != null && temp.getNext()!= null) {
+		if (temp != null && temp.getNext() != null) {
 			while (temp != null) {
 				Node value = temp;
 				temp = temp.getNext();
 				value.setNext(head.getNext());
-				head.setNext(value);;
+				head.setNext(value);
+				;
 			}
 		}
 
 	}
 
-	//find the node based on the index of k
+	/**
+	 * 
+	 * @Title: find
+	 * @Description: find the node based on the index of k
+	 * @param k
+	 * @return the node found
+	 * @author Xu
+	 * @date 2020-06-08 09:57:43
+	 */
 	public Node find(int k) {
 		Node temp = head.getNext();
 		int index = 0;
@@ -60,7 +92,14 @@ class SingleLinkedList {
 		return temp;
 	}
 
-	// add a node to the end of the SingleLinkedList
+	/**
+	 * 
+	 * @Title: add
+	 * @Description: add a node to the end of the SingleLinkedList
+	 * @param node
+	 * @author Xu
+	 * @date 2020-06-08 09:58:07
+	 */
 	public void add(Node node) {
 		Node tmp = head;
 		while (true) {
@@ -74,7 +113,14 @@ class SingleLinkedList {
 		tmp.setNext(node);
 	}
 
-	// add a new node based on the no. of the node
+	/**
+	 * 
+	 * @Title: addByOrder
+	 * @Description: add a new node based on the no. of the node
+	 * @param node
+	 * @author Xu
+	 * @date 2020-06-08 09:58:16
+	 */
 	public void addByOrder(Node node) {
 		Node temp = head;
 		while (true) {
@@ -97,9 +143,13 @@ class SingleLinkedList {
 		}
 	}
 
-	/*
-	 * delete node based on the node number
-	 * @param : no, the number of the node that needs to be deleted
+	/**
+	 * 
+	 * @Title: delete
+	 * @Description: delete node based on the node number
+	 * @param no: the number of the node that needs to be deleted
+	 * @author Xu
+	 * @date 2020-06-08 09:58:27
 	 */
 	public void delete(int no) {
 		Node temp = head;
@@ -116,10 +166,16 @@ class SingleLinkedList {
 		}
 
 	}
-	/*
-	 * update the information of a node
-	 * @param : node
+
+	/**
+	 * 
+	 * @Title: update
+	 * @Description: update the information of a node
+	 * @param node
+	 * @author Xu
+	 * @date 2020-06-08 09:58:43
 	 */
+
 	public void update(Node node) {
 		if (head.getNext() == null) {
 			System.out.println("Blank!!");
@@ -140,10 +196,17 @@ class SingleLinkedList {
 		}
 
 	}
-	//show the nodes contained in reverse order
+
+	/**
+	 * 
+	 * @Title: reverseShow
+	 * @Description: show the nodes contained in reverse order
+	 * @author Xu
+	 * @date 2020-06-08 09:58:54
+	 */
 	public void reverseShow() {
 		Stack<Node> stack = new Stack<>();
-		if (head.getNext()== null) {
+		if (head.getNext() == null) {
 			System.out.println("Empty!");
 			return;
 		}
@@ -161,7 +224,14 @@ class SingleLinkedList {
 			System.out.println(stack.pop());
 		}
 	}
-	//print the nodes contained 
+/**
+ * 
+ * @Title: show
+ * @Description: TODO
+ * @author Xu
+ * @date 2020-06-08 09:59:11
+ */
+	// print the nodes contained
 	public void show() {
 
 		if (head.getNext() == null) {
@@ -180,12 +250,19 @@ class SingleLinkedList {
 
 	}
 }
-
-//Node
+/**
+ * 
+ * @ClassName: Node
+ * @Description: Node class
+ * @author Xu
+ * @date 2020-06-08 10:06:37
+ */
 class Node {
 	private int no;
 	private String value;
-	// next is used to store the next Node that this node is linked to.
+	/**
+	 * 	next is used to store the next Node that this node is linked to.
+	 */
 	private Node next;
 
 	public Node(int no, String value) {

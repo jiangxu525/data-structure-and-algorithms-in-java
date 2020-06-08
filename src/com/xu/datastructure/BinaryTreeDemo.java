@@ -1,6 +1,12 @@
 package com.xu.datastructure;
 
-
+/**
+ * 
+ * @ClassName: BinaryTreeDemo
+ * @Description: demo for binary tree
+ * @author Xu
+ * @date 2020-06-07 11:23:07
+ */
 public class BinaryTreeDemo {
 
 	public static void main(String[] args) {
@@ -25,16 +31,6 @@ public class BinaryTreeDemo {
 		binaryTree.postOrder();
 		System.out.println("*************");
 
-//		PersonNode find = binaryTree.preOrderSearch(5);
-//		System.out.println(find.getId() + "   " + find.getName());
-//
-//		find = binaryTree.infixOrderSearch(5);
-//		System.out.println(find.getId() + "   " + find.getName());
-//		
-//		
-//		find = binaryTree.postOrderSearch(5);
-//		System.out.println(find.getId() + "   " + find.getName());
-
 		binaryTree.delNode(5);
 		binaryTree.preOrder();
 		System.out.println("***************");
@@ -43,56 +39,135 @@ public class BinaryTreeDemo {
 
 }
 
+/**
+ * 
+ * @ClassName: BinaryTree
+ * @Description: Binary Tree
+ * @author Xu
+ * @date 2020-06-07 11:23:27
+ */
 class BinaryTree {
+	/**
+	 * root node
+	 */
 	private PersonNode root;
 
+	/**
+	 * 
+	 * @Title: getRoot
+	 * @Description: getter for root
+	 * @return root node
+	 * @author Xu
+	 * @date 2020-06-07 11:24:19
+	 */
 	public PersonNode getRoot() {
 		return root;
 	}
 
+	/**
+	 * 
+	 * @Title: setRoot
+	 * @Description: setter for root node
+	 * @param root
+	 * @author Xu
+	 * @date 2020-06-07 11:24:41
+	 */
 	public void setRoot(PersonNode root) {
 		this.root = root;
 	}
 
+	/**
+	 * 
+	 * @Title: preOrder
+	 * @Description: preOrder
+	 * @author Xu
+	 * @date 2020-06-07 11:24:52
+	 */
 	public void preOrder() {
 		if (this.getRoot() != null) {
 			this.getRoot().preOrder();
 		}
 	}
 
+	/**
+	 * 
+	 * @Title: infixOrder
+	 * @Description: infixOrder
+	 * @author Xu
+	 * @date 2020-06-07 11:25:42
+	 */
 	public void infixOrder() {
 		if (this.getRoot() != null) {
 			this.getRoot().infixOrder();
 		}
 	}
 
+	/**
+	 * 
+	 * @Title: postOrder
+	 * @Description: postOrder
+	 * @author Xu
+	 * @date 2020-06-07 11:25:47
+	 */
 	public void postOrder() {
 		if (this.getRoot() != null) {
 			this.getRoot().postOrder();
 		}
 	}
 
+	/**
+	 * 
+	 * @Title: preOrderSearch
+	 * @Description: preOrderSearch
+	 * @param id: the index that needs to be found
+	 * @return the node of id. return null if not found
+	 * @author Xu
+	 * @date 2020-06-07 11:25:53
+	 */
 	public PersonNode preOrderSearch(int id) {
 		if (root != null) {
 			return root.preOrderSearch(id);
 		}
 		return null;
 	}
-
+/**
+ * 
+ * @Title: infixOrderSearch
+ * @Description: infixOrderSearch
+ * @param id: the index that needs to be found
+ * @return the node of id. return null if not found
+ * @author Xu
+ * @date 2020-06-07 11:26:45
+ */
 	public PersonNode infixOrderSearch(int id) {
 		if (root != null) {
 			return root.infixOrderSearch(id);
 		}
 		return null;
 	}
-
+/**
+ * 
+ * @Title: postOrderSearch
+ * @Description: postOrderSearch
+ * @param id: the index that needs to be found
+ * @return the node of id. return null if not found
+ * @author Xu
+ * @date 2020-06-07 11:27:05
+ */
 	public PersonNode postOrderSearch(int id) {
 		if (root != null) {
 			return root.postOrderSearch(id);
 		}
 		return null;
 	}
-
+/**
+ * 
+ * @Title: delNode
+ * @Description: delete a node
+ * @param id: the index of the node that needs to be deleted
+ * @author Xu
+ * @date 2020-06-07 11:27:22
+ */
 	public void delNode(int id) {
 		if (root != null) {
 			if (root.getId() == id) {
@@ -107,7 +182,13 @@ class BinaryTree {
 	}
 
 }
-
+/**
+ * 
+ * @ClassName: PersonNode
+ * @Description: PersonNode class
+ * @author Xu
+ * @date 2020-06-07 11:27:45
+ */
 class PersonNode {
 	private int id;
 	private String name;
@@ -185,7 +266,15 @@ class PersonNode {
 		}
 		System.out.println(this);
 	}
-
+/**
+ * 
+ * @Title: preOrderSearch
+ * @Description: preOrderSearch
+ * @param id: the index that needs to be searched
+ * @return the node found
+ * @author Xu
+ * @date 2020-06-07 11:29:18
+ */
 	public PersonNode preOrderSearch(int id) {
 		System.out.println("*");
 		if (this.getId() == id) {
@@ -203,7 +292,15 @@ class PersonNode {
 		}
 		return resNode;
 	}
-
+/**
+ * 
+ * @Title: infixOrderSearch
+ * @Description: infixOrderSearch
+ * @param id: the index that needs to be searched
+ * @return the node found
+ * @author Xu
+ * @date 2020-06-07 11:29:01
+ */
 	public PersonNode infixOrderSearch(int id) {
 		PersonNode resNode = null;
 		if (this.getLeft() != null) {
@@ -221,7 +318,15 @@ class PersonNode {
 		}
 		return resNode;
 	}
-
+/**
+ * 
+ * @Title: postOrderSearch
+ * @Description: postOrderSearch
+ * @param id: the index that needs to be searched
+ * @return the node found
+ * @author Xu
+ * @date 2020-06-07 11:28:39
+ */
 	public PersonNode postOrderSearch(int id) {
 		PersonNode resNode = null;
 		if (this.getLeft() != null) {
@@ -242,7 +347,14 @@ class PersonNode {
 		}
 		return null;
 	}
-
+/**
+ * 
+ * @Title: delNode
+ * @Description: delete certain node
+ * @param id: the index that needs to be deleted
+ * @author Xu
+ * @date 2020-06-07 11:28:16
+ */
 	// delete
 	public void delNode(int id) {
 		if (this.getLeft() != null && this.getLeft().id == id) {

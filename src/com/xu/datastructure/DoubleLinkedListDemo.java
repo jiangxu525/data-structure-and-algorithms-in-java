@@ -1,5 +1,11 @@
 package com.xu.datastructure;
-
+/**
+ * 
+ * @ClassName: DoubleLinkedListDemo
+ * @Description: demo for double linked list
+ * @author Xu
+ * @date 2020-06-08 09:48:06
+ */
 public class DoubleLinkedListDemo {
 
 	public static void main(String[] args) {
@@ -24,16 +30,37 @@ public class DoubleLinkedListDemo {
 //		list.show();
 	}
 }
-
+/**
+ * 
+ * @ClassName: DoubleLinkedList
+ * @Description: Double Linked List
+ * @author Xu
+ * @date 2020-06-08 09:48:30
+ */
 class DoubleLinkedList {
+	/**
+	 * head node
+	 */
 	public Node2 head = new Node2(0, "");
+/**
+ * 
+ * @Title: getHead
+ * @Description: getter for head node
+ * @return	return the head node
+ * @author Xu
+ * @date 2020-06-08 09:48:53
+ */
 
-	// return the head
 	public Node2 getHead() {
 		return head;
 	}
-
-	// print the DoubleLinkedList
+/**
+ * 
+ * @Title: show
+ * @Description: 	print the DoubleLinkedList
+ * @author Xu
+ * @date 2020-06-08 09:49:10
+ */
 	public void show() {
 		if (head.getNext() == null) {
 			System.out.println("Empty!");
@@ -49,8 +76,15 @@ class DoubleLinkedList {
 		}
 
 	}
+/**
+ * 
+ * @Title: add
+ * @Description: add a new node
+ * @param node
+ * @author Xu
+ * @date 2020-06-08 09:49:21
+ */
 
-	// add a new node
 	public void add(Node2 node) {
 		Node2 tmp = head;
 		while (true) {
@@ -63,8 +97,14 @@ class DoubleLinkedList {
 		tmp.setNext(node);
 		node.setPre(tmp);
 	}
-
-	// update an existing node
+/**
+ * 
+ * @Title: update
+ * @Description: update an existing node
+ * @param node
+ * @author Xu
+ * @date 2020-06-08 09:49:30
+ */
 	public void update(Node2 node) {
 		if (head.getNext() == null) {
 			System.out.println("Blank!!");
@@ -82,8 +122,14 @@ class DoubleLinkedList {
 			temp = temp.getNext();
 		}
 	}
-
-	// delete a node based on the no.
+/**
+ * 
+ * @Title: delete
+ * @Description: 	// delete a node based on the no.
+ * @param no: the index of the node that needs to be deleted
+ * @author Xu
+ * @date 2020-06-08 09:49:41
+ */
 	public void delete(int no) {
 		Node2 temp = head;
 		while (true) {
@@ -108,14 +154,30 @@ class DoubleLinkedList {
 	}
 
 }
-//Node2 class, and the difference from single linked list is that it contains a next and a pre
-//Also, users can define the parameters like name as needed. 
+
+
+/**
+ * 
+ * @ClassName: Node2
+ * @Description: the difference from single linked list is that it contains a next and a pre. Also, users can define the parameters like name as needed. 
+ * @author Xu
+ * @date 2020-06-08 09:50:09
+ */
+
 class Node2 {
 	private int no;
 	private String name;
 	private Node2 next;
 	private Node2 pre;
-
+/**
+ * 
+ * @Title: Node2
+ * @Description: Node2
+ * @param no
+ * @param name
+ * @author Xu
+ * @date 2020-06-08 09:50:38
+ */
 	public Node2(int no, String name) {
 		this.no = no;
 		this.name = name;

@@ -1,5 +1,12 @@
 package com.xu.datastructure;
 
+/**
+ * 
+ * @ClassName: ArrBinaryTreeDemo
+ * @Description: demo for binary tree
+ * @author Xu
+ * @date 2020-06-07 11:18:38
+ */
 public class ArrBinaryTreeDemo {
 
 	public static void main(String[] args) {
@@ -13,9 +20,24 @@ public class ArrBinaryTreeDemo {
 	}
 }
 
+/**
+ * 
+ * @ClassName: ArrayBinaryTree
+ * @Description: binary tree
+ * @author Xu
+ * @date 2020-06-07 11:19:00
+ */
 class ArrayBinaryTree {
 	private int[] arr;
 
+	/**
+	 * 
+	 * @Title: ArrayBinaryTree
+	 * @Description: ArrayBinaryTree
+	 * @param arr
+	 * @author Xu
+	 * @date 2020-06-07 11:19:17
+	 */
 	public ArrayBinaryTree(int[] arr) {
 		this.arr = arr;
 	}
@@ -24,6 +46,14 @@ class ArrayBinaryTree {
 		preOrder(0);
 	}
 
+	/**
+	 * 
+	 * @Title: preOrder
+	 * @Description: display in preOrder
+	 * @param index
+	 * @author Xu
+	 * @date 2020-06-07 11:19:38
+	 */
 	public void preOrder(int index) {
 		if (arr == null || arr.length == 0) {
 			System.out.println("Empty array");
@@ -42,6 +72,14 @@ class ArrayBinaryTree {
 		infixOrder(0);
 	}
 
+	/**
+	 * 
+	 * @Title: infixOrder
+	 * @Description: display in infixOrder
+	 * @param index
+	 * @author Xu
+	 * @date 2020-06-07 11:20:06
+	 */
 	public void infixOrder(int index) {
 		if (arr == null || arr.length == 0) {
 			System.out.println("Empty array");
@@ -62,6 +100,14 @@ class ArrayBinaryTree {
 		postOrder(0);
 	}
 
+	/**
+	 * 
+	 * @Title: postOrder
+	 * @Description: display in postOrder
+	 * @param index
+	 * @author Xu
+	 * @date 2020-06-07 11:20:18
+	 */
 	public void postOrder(int index) {
 		if (arr == null || arr.length == 0) {
 			System.out.println("Empty array");

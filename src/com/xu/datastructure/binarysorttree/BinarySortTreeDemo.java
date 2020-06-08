@@ -1,5 +1,11 @@
 package com.xu.datastructure.binarysorttree;
-
+/**
+ * 
+ * @ClassName: BinarySortTreeDemo
+ * @Description: demo for the binary sort tree
+ * @author Xu
+ * @date 2020-06-08 10:08:01
+ */
 public class BinarySortTreeDemo {
 
 	public static void main(String[] args) {
@@ -15,24 +21,57 @@ public class BinarySortTreeDemo {
 	}
 
 }
+/**
+ * 
+ * @ClassName: BinarySortTree
+ * @Description: Binary Sort Tree
+ * @author Xu
+ * @date 2020-06-08 10:08:23
+ */
 
 class BinarySortTree {
+	/**
+	 * root node 
+	 */
 	private Node root;
-
+/**
+ * 
+ * @Title: search
+ * @Description: search the node based on value
+ * @param value
+ * @return the node found
+ * @author Xu
+ * @date 2020-06-08 10:08:40
+ */
 	public Node search(int value) {
 		if (root == null) {
 			return null;
 		}
 		return root.search(value);
 	}
-
+/**
+ * 
+ * @Title: searchParent
+ * @Description: search ther parent node based on value
+ * @param value
+ * @return the parent node
+ * @author Xu
+ * @date 2020-06-08 10:08:58
+ */
 	public Node searchParent(int value) {
 		if (root == null) {
 			return null;
 		}
 		return root.searchParent(value);
 	}
-
+/**
+ * 
+ * @Title: delNode
+ * @Description: delete the node based on value
+ * @param value
+ * @author Xu
+ * @date 2020-06-08 10:09:22
+ */
 	public void delNode(int value) {
 		if (root == null) {
 			return;
@@ -53,7 +92,7 @@ class BinarySortTree {
 					parentNode.right = null;
 				}
 			} else if (targetNode.left != null && targetNode.right != null) {// contains two subs
-				int minVal = DdelRghtTreeMin(targetNode.right);
+				int minVal = delRghtTreeMin(targetNode.right);
 				targetNode.value = minVal;
 			} else { // contains one sub
 				if (targetNode.left != null) {
@@ -72,8 +111,16 @@ class BinarySortTree {
 			}
 		}
 	}
-
-	public int DdelRghtTreeMin(Node node) {
+/**
+ * 
+ * @Title: delRghtTreeMin
+ * @Description: delete the right tree min
+ * @param node
+ * @return return the target value
+ * @author Xu
+ * @date 2020-06-08 10:10:23
+ */
+	public int delRghtTreeMin(Node node) {
 		Node target = node;
 		while (target.left != null) {
 			target = target.left;
@@ -82,7 +129,14 @@ class BinarySortTree {
 		delNode(target.value);
 		return target.value;
 	}
-
+/**
+ * 
+ * @Title: add
+ * @Description: add new node
+ * @param node
+ * @author Xu
+ * @date 2020-06-08 10:10:50
+ */
 	public void add(Node node) {
 		if (root == null) {
 			root = node;
@@ -90,7 +144,13 @@ class BinarySortTree {
 			root.add(node);
 		}
 	}
-
+/**
+ * 
+ * @Title: infixOrder
+ * @Description: infixOrder
+ * @author Xu
+ * @date 2020-06-08 10:10:57
+ */
 	public void infixOrder() {
 		if (this.root == null) {
 			System.out.println("Empty!!");
@@ -99,7 +159,13 @@ class BinarySortTree {
 		}
 	}
 }
-
+/**
+ * 
+ * @ClassName: Node
+ * @Description: bean node
+ * @author Xu
+ * @date 2020-06-08 10:11:02
+ */
 class Node {
 	int value;
 	Node left;
@@ -160,7 +226,15 @@ class Node {
 			return this.right.search(value);
 		}
 	}
-
+/**
+ * 
+ * @Title: searchParent
+ * @Description: search Parent node
+ * @param value
+ * @return
+ * @author Xu
+ * @date 2020-06-08 10:11:15
+ */
 	public Node searchParent(int value) {
 		if ((this.left != null && this.left.value == value) || (this.right != null && this.right.value == value)) {
 			return this;

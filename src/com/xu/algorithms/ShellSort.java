@@ -1,5 +1,14 @@
 package com.xu.algorithms;
+
 import java.util.Arrays;
+
+/**
+ * 
+ * @ClassName: ShellSort
+ * @Description: algorithm for shell sort
+ * @author Xu
+ * @date 2020-06-07 11:16:03
+ */
 public class ShellSort {
 
 	public static void main(String[] args) {
@@ -14,6 +23,14 @@ public class ShellSort {
 		System.out.println(Arrays.toString(arr));
 	}
 
+	/**
+	 * 
+	 * @Title: shellSort
+	 * @Description: algorithm for shell sort
+	 * @param arr
+	 * @author Xu
+	 * @date 2020-06-07 11:16:19
+	 */
 	public static void shellSort(int[] arr) {
 		int insertValue;
 		int insertIndex;

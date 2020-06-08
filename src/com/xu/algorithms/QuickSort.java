@@ -2,6 +2,13 @@ package com.xu.algorithms;
 
 import java.util.Arrays;
 
+/**
+ * 
+ * @ClassName: QuickSort
+ * @Description: algorithm for QuickSort
+ * @author Xu
+ * @date 2020-06-07 11:13:36
+ */
 public class QuickSort {
 
 	public static void main(String[] args) {
@@ -15,6 +22,16 @@ public class QuickSort {
 		System.out.println(Arrays.toString(arr));
 	}
 
+	/**
+	 * 
+	 * @Title: quickSort
+	 * @Description: algorithm for QuickSort
+	 * @param arr
+	 * @param left
+	 * @param right
+	 * @author Xu
+	 * @date 2020-06-07 11:13:49
+	 */
 	public static void quickSort(int[] arr, int left, int right) {
 		int pivot = arr[(left + right) / 2];
 		int l = left;

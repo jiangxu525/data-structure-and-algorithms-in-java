@@ -1,6 +1,11 @@
 package com.xu.datastructure.thread;
-
-
+/**
+ * 
+ * @ClassName: ThreadedBinaryTreeDemo
+ * @Description: demo for threaded binary tree
+ * @author Xu
+ * @date 2020-06-08 10:11:41
+ */
 
 public class ThreadedBinaryTreeDemo {
 
@@ -31,8 +36,13 @@ public class ThreadedBinaryTreeDemo {
 	}
 
 }
-
-//infix treaded binary tree
+/**
+ * 
+ * @ClassName: ThreadedBinaryTree
+ * @Description: infix treaded binary tree
+ * @author Xu
+ * @date 2020-06-08 10:12:02
+ */
 class ThreadedBinaryTree {
 	private PersonNode root;
 	private PersonNode pre;
@@ -136,7 +146,13 @@ class ThreadedBinaryTree {
 	}
 
 }
-
+/**
+ * 
+ * @ClassName: PersonNode
+ * @Description: bean node
+ * @author Xu
+ * @date 2020-06-08 10:12:19
+ */
 class PersonNode {
 	private int id;
 	private String name;

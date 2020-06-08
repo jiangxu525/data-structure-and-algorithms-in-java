@@ -2,6 +2,13 @@ package com.xu.algorithms;
 
 import java.util.Arrays;
 
+/**
+ * 
+ * @ClassName: SelectSort
+ * @Description: algorithm for SelectSort
+ * @author Xu
+ * @date 2020-06-07 11:14:36
+ */
 public class SelectSort {
 
 	public static void main(String[] args) {
@@ -16,6 +23,14 @@ public class SelectSort {
 		System.out.println(Arrays.toString(arr));
 	}
 
+	/**
+	 * 
+	 * @Title: selectSort
+	 * @Description: algorithm for SelectSort
+	 * @param arr
+	 * @author Xu
+	 * @date 2020-06-07 11:14:46
+	 */
 	public static void selectSort(int[] arr) {
 		int min = 0;
 		int minIndex = 0;

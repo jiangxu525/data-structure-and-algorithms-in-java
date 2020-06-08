@@ -1,5 +1,11 @@
 package com.xu.datastructure;
-
+/**
+ * 
+ * @ClassName: LinkedListStackDemo
+ * @Description: demo for linked list of stack
+ * @author Xu
+ * @date 2020-06-08 10:07:04
+ */
 public class LinkedListStackDemo {
 
 	public static void main(String[] args) {
@@ -16,6 +22,14 @@ public class LinkedListStackDemo {
 		stack.show();
 	}
 }
+
+/**
+ * 
+ * @ClassName: LinkedListStack
+ * @Description: Stack
+ * @author Xu
+ * @date 2020-06-08 10:07:31
+ */
 
 class LinkedListStack{
 	private Node3 top;
@@ -56,7 +70,13 @@ class LinkedListStack{
 	
 }
 
-
+/**
+ * 
+ * @ClassName: Node3
+ * @Description: node used for the stack
+ * @author Xu
+ * @date 2020-06-08 10:07:43
+ */
 
 class Node3{
 	private Node3 next;

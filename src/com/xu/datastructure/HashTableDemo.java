@@ -1,7 +1,13 @@
 package com.xu.datastructure;
 
 import java.util.Scanner;
-
+/**
+ * 
+ * @ClassName: HashTableDemo
+ * @Description: demo for hash table
+ * @author Xu
+ * @date 2020-06-08 09:51:02
+ */
 public class HashTableDemo {
 
 	public static void main(String[] args) {
@@ -43,11 +49,24 @@ public class HashTableDemo {
 	}
 
 }
-
+/**
+ * 
+ * @ClassName: HashTab
+ * @Description: Hash Table
+ * @author Xu
+ * @date 2020-06-08 09:51:38
+ */
 class HashTab {
 	private EmployeeLinkedList[] employeeLinkedListArray;
 	private int size;
-
+/**
+ * 
+ * @Title: HashTab
+ * @Description: HashTab
+ * @param size
+ * @author Xu
+ * @date 2020-06-08 09:51:53
+ */
 	public HashTab(int size) {
 		this.size = size;
 		employeeLinkedListArray = new EmployeeLinkedList[size];
@@ -55,19 +74,39 @@ class HashTab {
 			employeeLinkedListArray[i] = new EmployeeLinkedList();
 		}
 	}
-
+/**
+ * 
+ * @Title: add
+ * @Description: add new employment node
+ * @param emp
+ * @author Xu
+ * @date 2020-06-08 09:51:58
+ */
 	public void add(Employee emp) {
 		int empLinkedListNo = hashFun(emp.id);
 		employeeLinkedListArray[empLinkedListNo].add(emp);
 	}
-
+/**
+ * 
+ * @Title: list
+ * @Description: print all employment nodes
+ * @author Xu
+ * @date 2020-06-08 09:52:10
+ */
 	public void list() {
 		for (int i = 0; i < employeeLinkedListArray.length; i++) {
 			System.out.print("No" + (i + 1) + ": ");
 			employeeLinkedListArray[i].list();
 		}
 	}
-
+/**
+ * 
+ * @Title: findEmployeeById
+ * @Description: find the employee node by id
+ * @param id: the index
+ * @author Xu
+ * @date 2020-06-08 09:52:29
+ */
 	public void findEmployeeById(int id) {
 
 		Employee emp = employeeLinkedListArray[hashFun(id)].find(id);
@@ -78,17 +117,36 @@ class HashTab {
 		}
 
 	}
-
-	// discrete function using modulus
+/**
+ * 
+ * @Title: hashFun
+ * @Description: discrete function using modulus
+ * @param id
+ * @return id/size
+ * @author Xu
+ * @date 2020-06-08 09:52:50
+ */
 	public int hashFun(int id) {
 		return id % size;
 	}
 }
-
-//create EmployeeLinkedList
+/**
+ * 
+ * @ClassName: EmployeeLinkedList
+ * @Description: create EmployeeLinkedList
+ * @author Xu
+ * @date 2020-06-08 09:53:11
+ */
 class EmployeeLinkedList {
 	private Employee head;
-
+/**
+ * 
+ * @Title: add
+ * @Description: add new employee
+ * @param emp
+ * @author Xu
+ * @date 2020-06-08 09:53:24
+ */
 	public void add(Employee emp) {
 		if (head == null) {
 			head = emp;
@@ -103,7 +161,13 @@ class EmployeeLinkedList {
 		}
 		currEmp.next = emp;
 	}
-
+/**
+ * 
+ * @Title: list
+ * @Description: print all nodes
+ * @author Xu
+ * @date 2020-06-08 09:53:41
+ */
 	public void list() {
 		if (head == null) {
 			System.out.println("Empty!");
@@ -120,7 +184,15 @@ class EmployeeLinkedList {
 		}
 
 	}
-
+/**
+ * 
+ * @Title: find
+ * @Description: find node by id
+ * @param id
+ * @return the node found
+ * @author Xu
+ * @date 2020-06-08 09:53:54
+ */
 	public Employee find(int id) {
 		if (head == null) {
 			System.out.println("no found!");
@@ -141,7 +213,13 @@ class EmployeeLinkedList {
 	}
 
 }
-
+/**
+ * 
+ * @ClassName: Employee
+ * @Description: bean model
+ * @author Xu
+ * @date 2020-06-08 09:54:11
+ */
 class Employee {
 
 	public int id;

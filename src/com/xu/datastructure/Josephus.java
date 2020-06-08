@@ -12,6 +12,13 @@
 
 package com.xu.datastructure;
 
+/**
+ * 
+ * @ClassName: Josephus
+ * @Description: algorithm solution for Josephus
+ * @author Xu
+ * @date 2020-06-08 09:55:07
+ */
 public class Josephus {
 
 	public static void main(String[] args) {
@@ -23,13 +30,29 @@ public class Josephus {
 
 }
 
-class CircleSingleLinkedList {
-	// create the first node
-	private Boy first;
-/*
- * add boys to the circle
- * @param the number of boys in the circle linked list
+/**
+ * 
+ * @ClassName: CircleSingleLinkedList
+ * @Description: Circle Single Linked List
+ * @author Xu
+ * @date 2020-06-08 09:55:21
  */
+class CircleSingleLinkedList {
+
+	/**
+	 * create the first node
+	 */
+	private Boy first;
+
+	/**
+	 * 
+	 * @Title: addBoy
+	 * @Description: add boys to the circle
+	 * @param nums: the number of boys in the circle linked list
+	 * @author Xu
+	 * @date 2020-06-08 09:55:48
+	 */
+
 	public void addBoy(int nums) {
 		if (nums < 1) {
 			System.out.println("Number must be higher than 1");
@@ -51,6 +74,13 @@ class CircleSingleLinkedList {
 		}
 	}
 
+	/**
+	 * 
+	 * @Title: showBoy
+	 * @Description: display all boys in the list
+	 * @author Xu
+	 * @date 2020-06-08 09:56:06
+	 */
 	public void showBoy() {
 		if (this.first == null) {
 			System.out.println("No boy!");
@@ -66,14 +96,17 @@ class CircleSingleLinkedList {
 		}
 	}
 
-	// based on requirement
-	/*
-	 * @param startNo, start count
+	/**
 	 * 
-	 * @param countNum
-	 * 
-	 * @param nums: the number of boys
+	 * @Title: countBoy
+	 * @Description: based on requirement
+	 * @param startNo:  start count
+	 * @param countNum:
+	 * @param nums:     the number of boys
+	 * @author Xu
+	 * @date 2020-06-08 09:56:19
 	 */
+
 	public void countBoy(int startNo, int countNum, int nums) {
 		if (first == null || startNo < 1 || startNo > nums) {
 			System.out.println("Wrong input, please enter correct number again.");
@@ -111,7 +144,13 @@ class CircleSingleLinkedList {
 
 	}
 }
-
+/**
+ * 
+ * @ClassName: Boy
+ * @Description: bean model for the demo
+ * @author Xu
+ * @date 2020-06-08 09:56:51
+ */
 class Boy {
 	private int no;
 	private Boy next;

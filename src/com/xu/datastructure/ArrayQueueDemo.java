@@ -2,6 +2,13 @@ package com.xu.datastructure;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * @ClassName: ArrayQueueDemo
+ * @Description: demo for array queue
+ * @author Xu
+ * @date 2020-06-07 11:17:34
+ */
 public class ArrayQueueDemo {
 
 	public static void main(String[] args) {
@@ -55,6 +62,13 @@ public class ArrayQueueDemo {
 
 }
 
+/**
+ * 
+ * @ClassName: ArrayQueue
+ * @Description: Array Queue
+ * @author Xu
+ * @date 2020-06-07 11:17:55
+ */
 class ArrayQueue {
 	private int maxSize;
 	private int front;

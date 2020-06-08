@@ -1,13 +1,19 @@
 package com.xu.algorithms;
 
 import java.util.Arrays;
-
+/**
+ * 
+ * @ClassName: BubbleSort
+ * @Description: algorithm for bubble sort
+ * @author Xu
+ * @date 2020-06-07 11:22:10
+ */
 public class BubbleSort {
 	
 	//test the bubble sort solution
 	public static void main(String[] args) {
 		
-		int[] arr= new int[20];
+		int[] arr = new int[20];
 		//create 20 random integers and put them in the array
 		for(int i = 0; i <20;i++) {
 			arr[i] = (int)(Math.random()*100);
@@ -16,7 +22,14 @@ public class BubbleSort {
 		//print out the result
 		System.out.println(Arrays.toString(arr));
 	}
-	
+	/**
+	 * 
+	 * @Title: bubbleSort
+	 * @Description: algorithm for bubble sort
+	 * @param arr
+	 * @author Xu
+	 * @date 2020-06-07 11:22:29
+	 */
 	public static void bubbleSort(int[] arr) {
 		int temp = 0;
 		boolean flag = false;

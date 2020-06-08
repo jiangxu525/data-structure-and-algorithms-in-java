@@ -4,7 +4,13 @@ package com.xu.datastructure;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
+/**
+ * 
+ * @ClassName: HuffmanTree
+ * @Description: Huffman Tree
+ * @author Xu
+ * @date 2020-06-08 09:54:24
+ */
 public class HuffmanTree {
 
 	public static void main(String[] args) {
@@ -12,8 +18,15 @@ public class HuffmanTree {
 		Node4 root = createHuffmanTree(arr);
 		root.preOrder();
 	}
-	
-	//create Huffman tree
+	/**
+	 * 
+	 * @Title: createHuffmanTree
+	 * @Description: create Huffman tree
+	 * @param arr
+	 * @return the huffman tree
+	 * @author Xu
+	 * @date 2020-06-08 09:54:32
+	 */
 	public static Node4 createHuffmanTree(int[] arr) {
 		List<Node4> nodes = new ArrayList<>();
 		for(int value:arr) {
@@ -37,7 +50,13 @@ public class HuffmanTree {
 	}
 
 }
-
+/**
+ * 
+ * @ClassName: Node4
+ * @Description: Node 
+ * @author Xu
+ * @date 2020-06-08 09:54:48
+ */
 class Node4 implements Comparable<Node4> {
 	int value;
 	Node4 left;
